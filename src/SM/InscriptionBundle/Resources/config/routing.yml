@@ -1,0 +1,3 @@
+sm_inscription_homepage:
+    path:     /login
+    defaults: { _controller: SMInscriptionBundle:Inscription:login }

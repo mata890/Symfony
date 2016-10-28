@@ -1,0 +1,160 @@
+<?php
+
+namespace SM\LoginBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Users
+ *@ORM\Table(name='users')
+ * @ORM\Entity(repositoryClass="SM\LoginBundle\Entity\UsersRepository")
+ */
+class Users
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="SM\LoginBundle\Entity\Fonction")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $fonction;
+    public function setFonction(Fonction $fonction)
+    {
+        $this->fonction = $fonction;
+
+        return $this;
+    }
+    public function getFonction()
+    {
+        return $this->fonction;
+    }
+
+    /**
+     * @return int
+     */
+
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     */
+    private $nom;
+
+    /**
+     * @var string
+     */
+    private $login;
+
+    /**
+     * @var string
+     */
+    private $password;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     * @return Users
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string 
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Users
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set login
+     *
+     * @param string $login
+     * @return Users
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
+    /**
+     * Get login
+     *
+     * @return string 
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return Users
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+
+}

@@ -1,0 +1,15 @@
+sm_login:
+    resource: "@SMLoginBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sm_inscription:
+    resource: "@SMInscriptionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+login:
+    pattern: /login
+logout:
+    pattern: /logout

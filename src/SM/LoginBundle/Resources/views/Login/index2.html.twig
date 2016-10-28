@@ -1,0 +1,13 @@
+{% extends "SMLoginBundle::layout.html.twig" %}
+{% block container %}
+
+    <div class="row">
+        <div class="col-md-12 center login-header">
+            <h2>Welcome to {{ name }}</h2>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+    <a href="{{path('sm_login_deconnexion')  }}">Deconnexion</a>
+
+
+{% endblock %}

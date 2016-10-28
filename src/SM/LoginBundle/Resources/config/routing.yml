@@ -1,0 +1,9 @@
+sm_login_homepage:
+    path:     /login
+    defaults: { _controller: SMLoginBundle:Login:index }
+sm_homepage:
+    path:     /
+    defaults: { _controller: SMLoginBundle:Login:index }
+sm_login_deconnexion:
+    path:     /deconnexion
+    defaults: { _controller: SMLoginBundle:Login:deconnexion }
